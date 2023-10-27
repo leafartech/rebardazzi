@@ -1,7 +1,13 @@
+'use client'
+
+import { useState } from "react";
 import Button from "../components/Button";
+import Modal from "../components/Modal";
 import Section from "../components/Section";
 
 export default function Page() {
+  const [modal, setModal] = useState<boolean>(false)
+
   return (
     <div>
       <header className="header min-h-screen flex justify-center items-center pb-16">
@@ -10,7 +16,7 @@ export default function Page() {
             <img src="./images/logo.svg" alt="" className="w-32 sm:w-72" />
             <h1 className="text-2xl sm:text-3xl font-extrabold my-4 sm:my-6">Aprenda Ballet Clássico do Zero com Renata Bardazzi, bailarina do Theatro Municipal de São Paulo e uma das maiores da atualidade.</h1>
             <p className="sub mb-3">Nunca foi tão fácil aprender o Ballet de uma forma simples e com qualquer idade, sem tomar horas do seu dias, muito menos necessitando de mais que um espaço na sua casa.</p>
-            <Button />
+            <Button setModal={setModal} modal={modal}/>
           </div>
           <div className="sm:flex sm:justify-end">
             <img src="./images/bg.webp" alt="" className="sm:h-[664px]" />
@@ -39,7 +45,7 @@ export default function Page() {
                   <li>Saúde mental</li>
                 </ul>
                 <p className="sub">Na jornada Ballet do zero irei caminhar ao seu lado mostrando exatamente o passo a passo do Ballet Clássico para que você conheça todos os elementos essenciais que compõem esse estilo de dança que transformou a minha vida e agora pode mudar a sua também.</p>
-                <Button />
+                <Button setModal={setModal} modal={modal} />
               </div>
             </div>
           </div>
@@ -91,9 +97,10 @@ export default function Page() {
               É a sua chance de ter uma aula comigo e poder contar com toda a minha experiência profissional, usufruindo de todos os benefícios que essa arte incrível pode te oferecer.
             </p>
             <p className="sub text-my mb-3">Inscreva-se tocando no botão abaixo.</p>
-            <Button />
+            <Button setModal={setModal} modal={modal} />
           </div>
         </Section>
+        <Modal modal={modal} />
       </main>
     </div>
   )

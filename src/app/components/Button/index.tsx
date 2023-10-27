@@ -1,14 +1,12 @@
-import Arrow from "@/Arrow"
-import { ReactElement } from "react"
-
 interface ButtonProps {
     modal: boolean
-    setModal: React.Dispatch<ReactElement>
+    setModal: React.Dispatch<boolean>
 }
 
-export default function Button() {
+export default function Button({ modal, setModal }: ButtonProps) {
+    console.log(modal)
     return (
-        <button className="relative w-full sm:w-80 tracking-widest text-lg sub flex justify-center items-center py-4 bg-my text-white rounded-full">
+        <button className="relative w-full sm:w-80 tracking-widest text-lg sub flex justify-center items-center py-4 bg-my text-white rounded-full" onClick={() => setModal(!modal)}>
             <span className="uppercase">Inscreva-se</span>
             <div className="absolute right-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 56 56" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M31.0963 26.7915L0 26.7921C0.417476 11.9244 12.6011 0 27.5698 0C42.8022 0 55.1506 12.3484 55.1506 27.5808C55.1506 42.8133 42.8022 55.1616 27.5698 55.1616C12.6034 55.1616 0.421284 43.241 0.000196547 28.3765L31.1213 28.3759C29.4815 29.2385 27.9391 30.3865 26.6082 31.6453C25.1817 32.9945 23.9623 34.5036 23.0947 35.9947C22.235 37.4721 21.6826 38.9976 21.6826 40.3649C21.6826 40.8024 22.0373 41.157 22.4748 41.157C22.9123 41.157 23.267 40.8024 23.267 40.3649C23.267 39.3909 23.6744 38.1487 24.4641 36.7916C25.2458 35.4481 26.3653 34.0558 27.6969 32.7963C30.3856 30.2532 33.7961 28.3807 36.8615 28.3807C37.299 28.3807 37.6536 28.0261 37.6536 27.5886C37.6536 27.1511 37.299 26.7964 36.8615 26.7964C33.8192 26.7964 30.4081 24.9455 27.7139 22.4147C26.3795 21.1612 25.256 19.7723 24.4709 18.4253C23.6784 17.0655 23.2669 15.8111 23.2669 14.8123C23.2669 14.3748 22.9123 14.0201 22.4748 14.0201C22.0373 14.0201 21.6826 14.3748 21.6826 14.8123C21.6826 16.2023 22.2373 17.7393 23.1021 19.2231C23.9743 20.7195 25.1991 22.2261 26.6292 23.5695C27.9501 24.8103 29.4767 25.9394 31.0963 26.7915Z" fill="#F0E6DB"></path></svg>
