@@ -67,11 +67,11 @@ export default function Modal({ modal, setModal }: ModalProps) {
                         <input type="text" name="PHONE" className="text-sm text-white/70 outline-none bg-transparent border border-zinc-300/40 rounded-full py-2 px-2 w-full" id="mce-PHONE" required />
                     </div>
 
-                    <input type="hidden" name="MMERGE6" className=" text" id="mce-MMERGE6" value={data.utm_campaign} />
-                    <input type="hidden" name="MMERGE7" className=" text" id="mce-MMERGE7" value={data.utm_source} />
-                    <input type="hidden" name="MMERGE8" className=" text" id="mce-MMERGE8" value={data.utm_medium} />
-                    <input type="hidden" name="MMERGE9" className=" text" id="mce-MMERGE9" value={data.utm_content} />
-                    <input type="hidden" name="MMERGE10" className=" text" id="mce-MMERGE10" value={data.utm_term} />
+                    <input type="hidden" name="MMERGE6" className=" text" id="mce-MMERGE6" value={data?.utm_campaign} />
+                    <input type="hidden" name="MMERGE7" className=" text" id="mce-MMERGE7" value={data?.utm_source} />
+                    <input type="hidden" name="MMERGE8" className=" text" id="mce-MMERGE8" value={data?.utm_medium} />
+                    <input type="hidden" name="MMERGE9" className=" text" id="mce-MMERGE9" value={data?.utm_content} />
+                    <input type="hidden" name="MMERGE10" className=" text" id="mce-MMERGE10" value={data?.utm_term} />
                 </div>
                 <button type="submit" className="relative w-full tracking-widest text-base sub flex justify-center items-center py-2 bg-my text-white rounded-full">
                     <span className="uppercase">Inscreva-se</span>
