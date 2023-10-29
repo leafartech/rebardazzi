@@ -5,10 +5,10 @@ interface ModalProps {
 }
 
 export default function Modal({ modal, setModal }: ModalProps) {
+    var data: any = {};
     if (typeof window !== 'undefined') {
         var query = location.search.slice(1);
         var partes = query.split('&');
-        var data: any = {};
         partes.forEach(function (parte) {
             var chaveValor = parte.split('=');
             var chave = chaveValor[0];
