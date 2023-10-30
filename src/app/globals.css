@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  background-image: url('../../public/images/bg0.webp');
+}
+.header-2 {
+  background-image: url('../../public/images/bg5.svg');
+}
+.back-2 {
+  background-image: url('../../public/images/bg6.svg');
+}
+.back-3 {
+  background-image: url('../../public/images/bg12.webp');
+  background-size: cover;
+}
+.back-4 {
+  background-image: url('../../public/images/bg13.webp');
+  background-size: cover;
+}
+.sub {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.swiper-pagination-bullet {
+  background: #fff!important;
+}
+.grad {
+  background: linear-gradient(70deg, #A502FB 0%, #25003BFA 100%);
+}
+@media (max-width: 450px) {
+  .back-4 {
+    background-image: none;
+  }
+}
