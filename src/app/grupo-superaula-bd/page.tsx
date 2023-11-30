@@ -14,7 +14,7 @@ export default function Home() {
       if (time >= 10) {
         clearInterval(interval);
       }
-    }, 500);
+    }, 300);
 
     const animationInterval = setInterval(() => {
       setSteps((prevState) => {
@@ -24,7 +24,7 @@ export default function Home() {
         clearInterval(animationInterval);
         return prevState;
       });
-    }, 50);
+    }, 30);
 
     return () => {
       clearInterval(interval);
@@ -34,13 +34,13 @@ export default function Home() {
 
   const barStyle = {
     width: `${steps}%`,
-    transition: "width 0.5s ease-in-out" // Adicionando a animação ease-in-out
+    transition: "width 0.3s ease-in-out" // Adicionando a animação ease-in-out
   };
 
   if (barStyle.width === '100%') {
     setTimeout(() => {
       router.push('https://chat.whatsapp.com/KUxSt1qEId5DSHRtr7MoTs')
-    }, 500)
+    }, 300)
   }
 
   return (
